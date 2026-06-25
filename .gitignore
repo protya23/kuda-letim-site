@@ -1,0 +1,18 @@
+# deps / caches / build
+node_modules
+.npmcache
+dist
+.vercel
+
+# local env + leads (никогда не коммитим секреты/лиды)
+.env
+.env.local
+leads.json
+leads.csv
+
+# editor / os
+.DS_Store
+.playwright-mcp
+
+# IMPORTANT: src/data/offers.json и public/offers/*.jpg НЕ игнорируем —
+# это данные офферов, которые деплоятся (на Vercel нет ../travel_posts).

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b1f3a'/%3E%3Ctext x='50' y='72' font-size='62' text-anchor='middle'%3E%E2%9C%88%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+    <title>Куда летим? — Путешествия дешевле обычной цены до 70%</title>
+    <script>
+      // Default DARK (cinematic); respect a previously chosen theme. Runs before paint.
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          document.documentElement.dataset.theme = t === 'light' ? 'light' : 'dark';
+        } catch (e) {
+          document.documentElement.dataset.theme = 'dark';
+        }
+      })();
+    </script>
+    <meta name="description" content="Закрытые предложения на отели и перелёты для тех, кто готов бронировать заранее. Онлайн с 2020." />
+    <meta property="og:title" content="Куда летим? — путешествия дешевле до 70%" />
+    <meta property="og:description" content="Закрытые предложения на отели и перелёты. Бронируйте заранее." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="/" />
+    <!-- Analytics + canonical: задайте VITE_* в env -->
+    <script>
+      window.__GA_ID = "%VITE_GA_ID%"; window.__PLAUSIBLE = "%VITE_PLAUSIBLE_DOMAIN%"; window.__SITE_URL = "%VITE_SITE_URL%";
+      (function () {
+        try {
+          var base = window.__SITE_URL && window.__SITE_URL.indexOf('VITE_') === -1 ? window.__SITE_URL.replace(/\/$/, '') : location.origin;
+          var c = document.querySelector('link[rel="canonical"]'); if (c) c.href = base + location.pathname;
+        } catch (e) {}
+      })();
+      (function () {
+        var ga = window.__GA_ID;
+        if (ga && ga.indexOf('VITE_') === -1) {
+          var s = document.createElement('script'); s.async = 1;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga; document.head.appendChild(s);
+          window.dataLayer = window.dataLayer || []; window.gtag = function () { dataLayer.push(arguments) };
+          gtag('js', new Date()); gtag('config', ga);
+        }
+        var pl = window.__PLAUSIBLE;
+        if (pl && pl.indexOf('VITE_') === -1) {
+          var p = document.createElement('script'); p.defer = 1;
+          p.setAttribute('data-domain', pl); p.src = 'https://plausible.io/js/script.js'; document.head.appendChild(p);
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
